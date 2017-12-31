@@ -22,12 +22,6 @@ def distance_between(start, end):
     return math.sqrt((start.x - end.x) ** 2 + (start.y - end.y) ** 2 + (start.z - end.z) ** 2)
 
 
-def center_of(cycle, vertices):
-    return Vertex(sum([vertices[i].x for i in cycle.indices]) / len(cycle.indices),
-                  sum([vertices[i].y for i in cycle.indices]) / len(cycle.indices),
-                  sum([vertices[i].z for i in cycle.indices]) / len(cycle.indices))
-
-
 class WireFrame:
     def __init__(self, display_vertices=True, display_edges=True):
         self.vertices = []
