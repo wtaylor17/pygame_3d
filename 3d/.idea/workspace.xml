@@ -15,11 +15,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cylinder_poly_demo.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cylinder_poly_demo.py">
+      <file leaf-file-name="renderables.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pygame_3d/renderables.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="-3598">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viewer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pygame_3d/viewer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="76" column="24" lean-forward="false" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -28,8 +38,20 @@
       <file leaf-file-name="pyramid_complete_frame_demo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyramid_complete_frame_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="312">
+              <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+              <folding>
+                <marker date="1514948367173" expanded="true" signature="43:456" ph="'''...'''" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cylinder_poly_demo.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cylinder_poly_demo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -72,14 +94,15 @@
         <option value="$PROJECT_DIR$/world_viewer demo.py" />
         <option value="$PROJECT_DIR$/primitives_demo_wireviewer.py" />
         <option value="$PROJECT_DIR$/world_viewer_demo.py" />
-        <option value="$PROJECT_DIR$/cube_complete_frame_demo.py" />
-        <option value="$PROJECT_DIR$/pyramid_complete_frame_demo.py" />
         <option value="$PROJECT_DIR$/pyramid_poly_demo.py" />
         <option value="$PROJECT_DIR$/spiral_demo.py" />
         <option value="$PROJECT_DIR$/circle_demo.py" />
-        <option value="$PROJECT_DIR$/pygame_3d/viewer.py" />
         <option value="$PROJECT_DIR$/cylinder_demo.py" />
         <option value="$PROJECT_DIR$/pygame_3d/renderables.py" />
+        <option value="$PROJECT_DIR$/cube_complete_frame_demo.py" />
+        <option value="$PROJECT_DIR$/pyramid_complete_frame_demo.py" />
+        <option value="$PROJECT_DIR$/cylinder_poly_demo.py" />
+        <option value="$PROJECT_DIR$/pygame_3d/viewer.py" />
       </list>
     </option>
   </component>
@@ -162,7 +185,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.cylinder_demo">
+  <component name="RunManager" selected="Python.cube_complete_frame_demo">
     <configuration default="false" name="cube_complete_frame_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -176,23 +199,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="3d" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cube_complete_frame_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="pyramid_complete_frame_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="3d" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyramid_complete_frame_demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -214,23 +220,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="circle_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="3d" />
-      <option name="SCRIPT_NAME" value="C:\Users\William Taylor\pygame_3d\3d\ring_demo.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="cylinder_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -244,6 +233,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="3d" />
       <option name="SCRIPT_NAME" value="C:\Users\William Taylor\pygame_3d\3d\cylinder_poly_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="cylinder_poly_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="3d" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cylinder_poly_demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="pyramid_complete_frame_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="3d" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyramid_complete_frame_demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -384,18 +407,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.cube_complete_frame_demo" />
-      <item index="1" class="java.lang.String" itemvalue="Python.pyramid_complete_frame_demo" />
-      <item index="2" class="java.lang.String" itemvalue="Python.pyramid_poly_demo" />
-      <item index="3" class="java.lang.String" itemvalue="Python.circle_demo" />
-      <item index="4" class="java.lang.String" itemvalue="Python.cylinder_demo" />
+      <item index="1" class="java.lang.String" itemvalue="Python.pyramid_poly_demo" />
+      <item index="2" class="java.lang.String" itemvalue="Python.cylinder_demo" />
+      <item index="3" class="java.lang.String" itemvalue="Python.cylinder_poly_demo" />
+      <item index="4" class="java.lang.String" itemvalue="Python.pyramid_complete_frame_demo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.cylinder_demo" />
-        <item index="1" class="java.lang.String" itemvalue="Python.cube_complete_frame_demo" />
-        <item index="2" class="java.lang.String" itemvalue="Python.pyramid_poly_demo" />
-        <item index="3" class="java.lang.String" itemvalue="Python.circle_demo" />
-        <item index="4" class="java.lang.String" itemvalue="Python.pyramid_complete_frame_demo" />
+        <item index="0" class="java.lang.String" itemvalue="Python.cube_complete_frame_demo" />
+        <item index="1" class="java.lang.String" itemvalue="Python.cylinder_demo" />
+        <item index="2" class="java.lang.String" itemvalue="Python.pyramid_complete_frame_demo" />
+        <item index="3" class="java.lang.String" itemvalue="Python.cylinder_poly_demo" />
+        <item index="4" class="java.lang.String" itemvalue="Python.pyramid_poly_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -413,7 +436,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -450,7 +473,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -486,7 +509,7 @@
         <state relative-caret-position="2278">
           <caret line="134" column="29" lean-forward="false" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -505,7 +528,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -515,7 +538,7 @@
         <state relative-caret-position="680">
           <caret line="41" column="32" lean-forward="false" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -535,7 +558,7 @@
         <state relative-caret-position="697">
           <caret line="41" column="32" lean-forward="true" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -574,7 +597,7 @@
         <state relative-caret-position="1275">
           <caret line="75" column="37" lean-forward="false" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -593,7 +616,7 @@
         <state relative-caret-position="1258">
           <caret line="75" column="37" lean-forward="false" selection-start-line="75" selection-start-column="37" selection-end-line="75" selection-end-column="37" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -604,7 +627,7 @@
         <state relative-caret-position="221">
           <caret line="13" column="37" lean-forward="true" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#13#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -623,44 +646,11 @@
     <entry file="file://$PROJECT_DIR$/renderable_primitive_pyramid.py" />
     <entry file="file://$PROJECT_DIR$/primitives_demo_wireviewer.py" />
     <entry file="file://$PROJECT_DIR$/world_viewer_demo.py" />
-    <entry file="file://$PROJECT_DIR$/cube_complete_frame_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spiral_demo.py" />
     <entry file="file://$PROJECT_DIR$/ring_demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="14" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pygame_3d/viewer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612">
-          <caret line="33" column="106" lean-forward="false" selection-start-line="33" selection-start-column="106" selection-end-line="33" selection-end-column="106" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pygame_3d/renderables.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="214" column="50" lean-forward="false" selection-start-line="214" selection-start-column="50" selection-end-line="214" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyramid_complete_frame_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,10 +662,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cube_complete_frame_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyramid_complete_frame_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <marker date="1514948367173" expanded="true" signature="43:456" ph="'''...'''" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pygame_3d/renderables.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3598">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cylinder_poly_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="20" column="55" lean-forward="false" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pygame_3d/viewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="76" column="24" lean-forward="false" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
           <folding />
         </state>
       </provider>

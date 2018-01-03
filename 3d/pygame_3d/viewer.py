@@ -1,7 +1,20 @@
 import pygame
 from pygame import time as time
 
+'''
+viewer.py
+contains classes to aid in renderable viewing
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+WRITTEN BY WILLIAM TAYLOR-MELANSON
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+'''
 
+
+# a class to easily view WireFrame renderables
 class WireFrameViewer:
     def __init__(self, w, h, caption="Demo", background=(255, 255, 255)):
         self.bodies = []
@@ -31,13 +44,14 @@ class WireFrameViewer:
             if frame.display_vertices:
                 pygame.draw.circle(self.screen, self.vertex_color, (int(vertex.x), int(vertex.y)), 8)
         if frame.display_polygons:
-            frame.cycles.sort(key=lambda c: sum([frame.vertices[i].z / len(c.indices) for i in c.indices]))
+            frame.cycles.sort(key=lambda c:  # +z axis is away from viewer, cycles sorted accordingly
+                              sum([frame.vertices[i].z / len(c.indices) for i in c.indices]), reverse=True)
             for cycle in frame.cycles:
                 pygame.draw.polygon(self.screen, cycle.color,
                                     [[frame.vertices[i].x, frame.vertices[i].y]
                                      for i in cycle.indices])
 
-    # game loop
+    # rendering loop
     def run(self):
         running = True
         while running:
@@ -54,13 +68,13 @@ class WireFrameViewer:
             origin = None
             # key event handling
             if keys[pygame.K_w]:
-                phi = -0.1
-            elif keys[pygame.K_s]:
                 phi = 0.1
+            elif keys[pygame.K_s]:
+                phi = -0.1
             if keys[pygame.K_a]:
-                zeta = -0.1
-            elif keys[pygame.K_d]:
                 zeta = 0.1
+            elif keys[pygame.K_d]:
+                zeta = -0.1
             if keys[pygame.K_q]:
                 theta = -0.1
             elif keys[pygame.K_e]:
@@ -77,7 +91,7 @@ class WireFrameViewer:
                 translation['x'] = -3
             if keys[pygame.K_RIGHT]:
                 translation['x'] = 3
-            # vertex/edge visibility flags
+            # vertex/edge/cycle visibility flags
             vertex_flag = False
             edge_flag = False
             cycle_flag = False
@@ -90,6 +104,7 @@ class WireFrameViewer:
             change_flag = False
             self.screen.fill(self.background)
             for body in self.bodies:
+                # apply transformations to all WireFrames
                 body.rotate('z', theta, origin)
                 body.rotate('x', phi, origin)
                 body.rotate('y', zeta, origin)
@@ -110,5 +125,6 @@ class WireFrameViewer:
             if change_flag:
                 self.flag_frame = self.frame_count
             pygame.display.flip()
+            # 35 max fps
             self.clock.tick(35)
             self.frame_count += 1

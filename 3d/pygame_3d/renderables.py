@@ -1,6 +1,21 @@
 import math
 
+'''
+renderables.py
+contains classes to aid in 3D object modelling
+as well as functions to aid in creating basic
+3D primitives (e.g cube)
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+WRITTEN BY WILLIAM TAYLOR-MELANSON
+----------------------------------------------
+----------------------------------------------
+----------------------------------------------
+'''
 
+
+# models a vertex
 class Vertex:
     def __init__(self, x, y, z):
         self.x = x
@@ -12,16 +27,20 @@ class Vertex:
         return [self.x, self.y, self.z]
 
 
+# models a cycle of vertices (polygon side)
+# indices are kept track of to reference vertices
 class Cycle:
     def __init__(self, color, indices):
         self.color = color
         self.indices = indices
 
 
+# returns the distance between two vertices
 def distance_between(start, end):
     return math.sqrt((start.x - end.x) ** 2 + (start.y - end.y) ** 2 + (start.z - end.z) ** 2)
 
 
+# models a wire frame of vertices, containing cycles
 class WireFrame:
     def __init__(self, display_vertices=True, display_edges=True):
         self.vertices = []
@@ -53,6 +72,7 @@ class WireFrame:
             return
         self.vertices[i].neighbors.extend(vertex_list)
 
+    # add a list of neighbor vertices (referenced by index) to the vertex at the specified index
     def add_neighbors_by_index(self, v, indices):
         self.add_neighbors(v, [self.vertices[i] for i in indices])
 
