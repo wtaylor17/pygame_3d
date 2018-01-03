@@ -29,7 +29,7 @@ class WireFrameViewer:
                                        (vertex.x, vertex.y),
                                        (neighbor.x, neighbor.y))
             if frame.display_vertices:
-                pygame.draw.circle(self.screen, self.vertex_color, (int(vertex.x), int(vertex.y)), 4)
+                pygame.draw.circle(self.screen, self.vertex_color, (int(vertex.x), int(vertex.y)), 8)
         if frame.display_polygons:
             frame.cycles.sort(key=lambda c: sum([frame.vertices[i].z / len(c.indices) for i in c.indices]))
             for cycle in frame.cycles:
@@ -89,7 +89,6 @@ class WireFrameViewer:
                 cycle_flag = True
             change_flag = False
             self.screen.fill(self.background)
-
             for body in self.bodies:
                 body.rotate('z', theta, origin)
                 body.rotate('x', phi, origin)

@@ -29,18 +29,23 @@ class WireFrame:
         self.display_vertices = display_vertices
         self.display_edges = display_edges
         self.display_polygons = True
+        self.display_nested = True
 
     # add a vertex to the WireFrame
     def add_vertex(self, vertex):
         self.vertices.append(vertex)
 
+    # add a list of vertices to the WireFrame
+    def add_vertices(self, vertex_list):
+        self.vertices.extend(vertex_list)
+
     # add a cycle (rigid side) to the WireFrame
     def add_cycle(self, color, cycle):
         self.cycles.append(Cycle(color, cycle))
 
-    # add a list of vertices to the WireFrame
-    def add_vertices(self, vertex_list):
-        self.vertices.extend(vertex_list)
+    # add a list of cycles to the WireFrame
+    def add_cycles(self, cycles):
+        self.cycles.extend(cycles)
 
     # add a list of neighbor vertices to the vertex at the specified index
     def add_neighbors(self, i, vertex_list):
@@ -106,6 +111,7 @@ class WireFrame:
                     vertex.y = center[1] + r*math.sin(theta)
 
 
+# returns a WireFrame modelling a cube, with visible frame (neighbors)
 def build_cube_complete_frame(location, side_length):
     cube = WireFrame()
     # create vertices
@@ -133,6 +139,7 @@ def build_cube_complete_frame(location, side_length):
     return cube
 
 
+# returns a WireFrame modelling a cube with only cycles(sides)
 def build_cube_poly(location, side_length):
     cube = WireFrame(display_edges=False, display_vertices=False)
     # create vertices
@@ -152,6 +159,7 @@ def build_cube_poly(location, side_length):
     return cube
 
 
+# returns a WireFrame modelling a pyramid, with visible frame (neighbors)
 def build_pyramid_complete_frame(location, base, height):
     pyramid = WireFrame()
     top = Vertex(location.x + base / 2, location.y, location.z + base/2)
@@ -179,6 +187,7 @@ def build_pyramid_complete_frame(location, base, height):
     return pyramid
 
 
+# returns a WireFrame modelling a pyramid with only cycles(sides)
 def build_pyramid_poly(location, base, height):
     pyramid = WireFrame()
     top = Vertex(location.x + base / 2, location.y, location.z + base / 2)
@@ -201,3 +210,16 @@ def build_pyramid_poly(location, base, height):
     pyramid.add_cycle((0, 255, 0), [0, 2, 4])
     pyramid.add_cycle((0, 0, 255), [0, 4, 3])
     return pyramid
+
+
+# returns a list of vertices modelling a 2D circle
+def build_circular_face(center, radius):
+    i = 0
+    z = center.z
+    circle_vertices = list()
+    circle_vertices.append(center)
+    while i <= 2 * math.pi + 0.1:
+        # create face of circle
+        circle_vertices.append(Vertex(center.x + radius * math.cos(i), center.y + radius * math.sin(i), z))
+        i += 0.1
+    return circle_vertices
