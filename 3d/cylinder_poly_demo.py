@@ -23,9 +23,7 @@ cylinder.add_vertices(front_face)
 cylinder.add_vertices(back_face)
 
 # face creation
-i = 1
-print(str(len(back_face)))
-while i < len(back_face) - 1:
+for i in range(1, len(back_face) - 1):
     # front face polygon
     cylinder.add_cycle((0, 255, 0), [i, 0, i + 1])
     # back face polygon
