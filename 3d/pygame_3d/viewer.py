@@ -1,6 +1,7 @@
 import pygame
 from pygame import time as time
 
+
 '''
 viewer.py
 contains classes to aid in renderable viewing
@@ -12,6 +13,16 @@ WRITTEN BY WILLIAM TAYLOR-MELANSON
 ----------------------------------------------
 ----------------------------------------------
 '''
+
+
+def get_grad_rgb(cycle, vertices):
+    mean = [0, 0, 0]
+    for index in cycle:
+        mean[0] += vertices[index].x
+        mean[1] += vertices[index].y
+        mean[2] += vertices[index].z
+    mean = [x / len(vertices) for x in mean]
+    return abs(255 - mean[0]) % 255, abs(100 - mean[1]) % 255, abs(400 - mean[2]) % 255
 
 
 # a class to easily view WireFrame renderables
@@ -44,8 +55,13 @@ class WireFrameViewer:
             if frame.display_vertices:
                 pygame.draw.circle(self.screen, self.vertex_color, (int(vertex.x), int(vertex.y)), 8)
         if frame.display_polygons:
-            frame.cycles.sort(key=lambda c:  # +z axis is away from viewer, cycles sorted accordingly
-                              sum([frame.vertices[i].z / len(c.indices) for i in c.indices]), reverse=True)
+            try:
+                frame.cycles.sort(key=lambda c:  # +z axis is away from viewer, cycles sorted accordingly
+                                  sum([frame.vertices[i].z / len(c.indices)
+                                      for i in c.indices if i < len(frame.vertices)]), reverse=True)
+            except IndexError as ie:
+                print(ie)
+
             for cycle in frame.cycles:
                 pygame.draw.polygon(self.screen, cycle.color,
                                     [[frame.vertices[i].x, frame.vertices[i].y]
@@ -55,6 +71,7 @@ class WireFrameViewer:
     def run(self):
         running = True
         while running:
+            self.clock.tick(35)
             # empty the event queue
             if len([event for event in pygame.event.get() if event.type is pygame.QUIT]):
                 running = False
@@ -68,9 +85,9 @@ class WireFrameViewer:
             origin = None
             # key event handling
             if keys[pygame.K_w]:
-                phi = 0.1
-            elif keys[pygame.K_s]:
                 phi = -0.1
+            elif keys[pygame.K_s]:
+                phi = 0.1
             if keys[pygame.K_a]:
                 zeta = 0.1
             elif keys[pygame.K_d]:
@@ -125,6 +142,4 @@ class WireFrameViewer:
             if change_flag:
                 self.flag_frame = self.frame_count
             pygame.display.flip()
-            # 35 max fps
-            self.clock.tick(35)
             self.frame_count += 1

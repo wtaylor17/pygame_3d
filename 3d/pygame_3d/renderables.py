@@ -107,28 +107,21 @@ class WireFrame:
 
     # rotates the WireFrame about the specified axis by the specified angle
     def rotate(self, axis, radians, center=None):
-        if axis in ['x', 'y', 'z']:
+        axes = {'x': 0, 'y': 1, 'z': 2}
+        if axis in axes:
             if center is None:
                 center = self.center()
             for vertex in self.vertices:
-                x = vertex.x - center[0]
-                y = vertex.y - center[1]
-                z = vertex.z - center[2]
-                if axis is 'x':
-                    r = math.hypot(y, z)
-                    theta = math.atan2(y, z) + radians
-                    vertex.z = center[2] + r*math.cos(theta)
-                    vertex.y = center[1] + r*math.sin(theta)
-                elif axis is 'y':
-                    r = math.hypot(x, z)
-                    theta = math.atan2(x, z) + radians
-                    vertex.z = center[2] + r*math.cos(theta)
-                    vertex.x = center[0] + r*math.sin(theta)
-                elif axis is 'z':
-                    r = math.hypot(x, y)
-                    theta = math.atan2(y, x) + radians
-                    vertex.x = center[0] + r*math.cos(theta)
-                    vertex.y = center[1] + r*math.sin(theta)
+                pos = list()
+                for a in axes.keys():
+                    pos.append(getattr(vertex, a) - center[axes[a]])
+                b = (axes[axis] + 1) % 3
+                a = ~(b | axes[axis]) & 3
+                r = math.hypot(pos[a], pos[b])
+                theta = math.atan2(pos[a], pos[b]) + radians
+                attr = [key for key in axes.keys()]
+                setattr(vertex, attr[a], center[a] + r*math.sin(theta))
+                setattr(vertex, attr[b], center[b] + r*math.cos(theta))
 
 
 # returns a WireFrame modelling a cube, with visible frame (neighbors)
